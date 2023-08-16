@@ -27,7 +27,7 @@ const config = require("../ProjectCopnfig");
     
     const targetLinkPath = path.join(y3ProjectPath, "script")
 
-    const isCorrect = fs.lstatSync(sourceLinkPath).isSymbolicLink() && fs.realpathSync(sourceLinkPath) === targetLinkPath;
+    const isCorrect = fs.lstatSync(targetLinkPath).isSymbolicLink() && fs.realpathSync(targetLinkPath) === sourceLinkPath;
 
     if (isCorrect)
     {
